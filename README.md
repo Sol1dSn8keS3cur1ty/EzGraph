@@ -1,4 +1,4 @@
-**# EzGraph**
+# EzGraph
 
 EzGraph is a Python tool used for interacting with Microsoft Graph API. This tool was written for use on offensive engagements (penetration testing), but could be used/modified to fit many purposes. 
 
