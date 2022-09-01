@@ -1,4 +1,4 @@
-**# EzGraph
+**# EzGraph**
 
 EzGraph is a Python tool used for interacting with Microsoft Graph API. This tool was written for use on offensive engagements (penetration testing), but could be used/modified to fit many purposes. 
 
@@ -125,4 +125,4 @@ Useful Azure AD Role Template IDs:
 
         To find a full list of default role template ID's, visit "https://docs.microsoft.com/en-us/azure/active-directory/roles/permissions-reference"
 ```
-**
+
