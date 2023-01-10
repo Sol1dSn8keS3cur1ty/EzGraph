@@ -47,7 +47,7 @@ This module requires one of the following API permissions for Microsoft Graph:
 * Group.ReadWrite.All
 * Directory.ReadWrite.All
 
-Potential Privilege Escalation Scenario:  
+**Potential Privilege Escalation Scenario:**  
 Add a user or service principal you control into a group that has been assigned elevated privileges within Azure Resource Manager (Contributer, Owner)
 
 Note: If an Azure AD group is role-assignable, meaning it can be assigned an Azure AD role such as "Global Administrator", the permissions listed above will not be sufficient as you will also require the 'RoleManagement.ReadWrite.Directory'. This effectively prevents a principal with the above listed permissions from escalating privileges within Azure AD, however it does not prevent you from escalating privileges within Azure Resource Manager.
@@ -71,7 +71,8 @@ This module requires  the following API permissions for Microsoft Graph:
 * AppRoleAssignment.ReadWrite.All  
 Note: This is a very high privilege for Microsoft Graph. With it, you can assign any API permission you want to any service principal of your choosing. Proceed with caution.
 
-Potential Privilege Escalation Scenario:
+**Potential Privilege Escalation Scenario:**  
+Add a more privileged MS Graph permission like "RoleManagement.ReadWrite.All" to a security principal (User, Group, Service Principal).
 
 ```
 usage: python3 ezgraph.py -h add_approle_sp [-h] -p PRINCIPALID -r RESOURCEID -a APPROLEID
@@ -103,6 +104,9 @@ Note: This module uses the "Template ID" method of assigning an Azure AD role.
 This module requires the follow API permissions for Microsoft Graph:
 * RoleManagement.ReadWrite.Directory
 Note: This is essentially the highest permission you can have in Microsoft Graph. With it, you can assign any Azure AD Role to any user or service principal. Proceed with caution.
+
+**Potential Privilege Escalation Scenario:**  
+Assign a highly privileged Azure AD role like Global Administrator to a security principal (User, Group, Service Principal).
 
 ```
 usage: python3 ezgraph.py -h add_AAD_role [-h] -u USERID -r ROLEID
